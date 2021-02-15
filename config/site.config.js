@@ -9,10 +9,10 @@ if (!ROOT) {
 
 const config = {
   // Your website's name, used for favicon meta tags
-  site_name: 'Stephanie Bolder - portfolio',
+  site_name: 'Stephanie Bolder - Portfolio',
 
   // Your website's description, used for favicon meta tags
-  site_description: 'Portfolio met alle gemaakte projecten door Stephanie Bolder',
+  site_description: 'A modern boilerplate for static website development',
 
   // Your website's URL, used for sitemap
   site_url: '',
