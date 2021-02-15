@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Stephanie Bolder | Home</title>
+    <title>Stephanie Bolder | Cases</title>
     <meta name="description" content="" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -73,6 +73,27 @@
 
     .mt-22 {
         margin-top: 5.5rem;
+    }
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        font-size: 18px;
+        outline: none;
+        background-color: white;
+        border-width: 2px;
+        border-color: #f2f4f6;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        z-index: 0;
+    }
+
+    #myBtn:hover {
+      border-width: 2px;
+      border-color: black;
     }
 
     </style>
@@ -148,6 +169,8 @@
 </div>
 </div>
 
+<button onclick="topFunction()" id="myBtn" title="Naar boven"><img src="images/icons/ArrowTop.png" class="h-4 mx-1 " alt=""/></button>
+
 <footer class="bg-yellow-800 bg-opacity-50 py-2">
   <div class="mx-12 flex flex-row justify-between items-center ">
       <img src="images/logo.png" class="w-12 h-12" />
@@ -161,5 +184,20 @@
   </div>
 </footer>
 
+<script>
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 </body>
 </html>
