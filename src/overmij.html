@@ -94,6 +94,27 @@
         border-width: 3px;
     }
 
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        font-size: 18px;
+        outline: none;
+        background-color: white;
+        border-width: 2px;
+        border-color: #f2f4f6;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        z-index: 0;
+    }
+
+    #myBtn:hover {
+      border-width: 2px;
+      border-color: black;
+    }
+
     </style>
 </head>
 <body>  
@@ -126,7 +147,7 @@
         <img class="w-80" src="images/FotoStephanieBolder.jpg"/>
         <img class="mt-12 w-80" src="images/FotoStephanieBolder.jpg"/>
     </div>
-    <div class="flex justify-center items-center align-center flex-col w-144 ml-36 mt-24 ">
+    <div class="flex justify-center items-center align-center flex-col w-144 ml-64 mt-24 ">
         <div class="font-garamond text-xl pb-4 text-zwart border-b-2 border-black">Hoi, ik ben Stephanie!</div>
         <div class="leading-8 font-open text-sm mt-4 text-zwart ">
             Aangenaam! Ik ben Stephanie Bolder, en studeer momenteel ICT & Media Design. Ik kom uit een klein dorpje in Zeeland genaamd Wemeldinge, waar ik mijn hele leven al woon.<br><br>
@@ -136,8 +157,8 @@
             Ik ben niet alleen User Experience designer, maar houd me ook graag bezig met development. Coderen in HTML, CSS, Javascript, de basics. Ook ben ik bezig met nieuwe talen te leren, zo ben ik momenteel bezig met een project in Vue.JS.<br><br>
             Geïnteresseerd geraakt om samen te werken? Stuur me dan een berichtje op mijn socials, of vul de contact form in.
         </div>
-        <div class="bg-gray-100 w-4/12 mt-4">
-        <button class="w-full button text-left focus:outline-none"><div class="leesmeerbutton text-sm font-garamond">Neem contact op!</div></button>
+        <div class="bg-gray-100 mt-4">
+        <button class="hover:shadow-md transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 py-1 px-4 font-garamond border-2 hover:border-black ">Neem contact op!</div></button>
         </div>
     </div>
 </div>
@@ -149,7 +170,9 @@
                 <div class="hover:shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 border-3 border-yellow-800 border-opacity-50 hover:border-black bg-white h-80 align-center">
                     <div class="font-garamond text-2xl ml-2 -mt-4 text-black">NO. 01</div>
                     <div class="mt-8 text-center font-garamond text-lg text-zwart mb-4">Vertrouwen</div>
-                    <div class="border-l-1 border-black h-8 ml-32 "></div>
+                    <div class="flex justify-center align-center items-center">
+                    <div class="border-l-1 border-black h-8"></div>
+                    </div>
                     <div class="pb-2 mt-4 mx-4 font-open text-xs leading-8 text-zwart">Vertrouwen binnen een samenwerking is voor mij het allerbelangrijkst. Afspraken kom ik na. Ik ben dienstbaar en servicegericht naar mijn cliënten.</div>
                 </div>
             </div>
@@ -157,7 +180,9 @@
                 <div class="hover:shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 border-3 border-yellow-800 border-opacity-50 hover:border-black bg-white h-80 align-center">
                     <div class="font-garamond text-2xl ml-2 -mt-4 text-black">NO. 02</div>
                     <div class="mt-8 text-center font-garamond text-lg mb-4">Structuur</div>
-                    <div class="border-l-1 border-black h-8 ml-32 "></div>
+                    <div class="flex justify-center align-center items-center">
+                    <div class="border-l-1 border-black h-8"></div>
+                    </div>
                     <div class="pb-2 mt-4 mx-4 font-open text-xs leading-8">Ik werk secuur en punctueel, en wil dat de producten die ik lever van top kwaliteit zijn. Ik werk ordelijk en systematisch, gebruikmakend van dagelijkse & wekelijkse planningen.</div>
                 </div>
             </div>
@@ -165,7 +190,9 @@
                 <div class="hover:shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 border-3 border-yellow-800 border-opacity-50 hover:border-black bg-white h-80 align-center">
                     <div class="font-garamond text-2xl ml-2 -mt-4 text-black">NO. 03</div>
                     <div class="mt-8 text-center font-garamond text-lg mb-4">Open Minded</div>
-                    <div class="border-l-1 border-black h-8 ml-32 "></div>
+                    <div class="flex justify-center align-center items-center">
+                    <div class="border-l-1 border-black h-8"></div>
+                    </div>
                     <div class="pb-2 mt-4 mx-4 font-open text-xs leading-8">Ik volg en hanteer de nieuwste ontwikkelingen. Hierbij sta ik open voor ideeën van anderen, zoals nieuwe inzichten, oplossingen en perspectieven.</div>
                 </div>
             </div>
@@ -174,15 +201,15 @@
 </div>
 
 <div class="my-8 flex justify-center items-center">
-    <div class="border-2 hover:border-black transform hover:scale-102 ease-in-out duration-200 items-center py-8 w-9/12 flex flex-row justify-between bg-gray-100">
-        <div class="ml-24 font-garamond text-lg">Meer informatie?</div>
-        <div class="mr-36 font-open text-xs leading-6 w-5/12 ">Wil je graag meer leren over mij, of over een project waar ik aan gewerkt heb? Of, wil je me graag inhuren voor een nieuw project? Voel je vrij om contact met me op te nemen, zodat we elkaar kunnen leren kennen! Klik op de button om naar de contact pagina te gaan.</div>
-        <div class="transform rotate-45 bg-bruin w-12 h-12 flex justify-center items-center relative -mr-6">
-            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                <g><g><path d="M508.875,248.458l-160-160c-4.167-4.167-10.917-4.167-15.083,0c-4.167,4.167-4.167,10.917,0,15.083l141.792,141.792    H10.667C4.771,245.333,0,250.104,0,256s4.771,10.667,10.667,10.667h464.917L333.792,408.458c-4.167,4.167-4.167,10.917,0,15.083    c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125l160-160C513.042,259.375,513.042,252.625,508.875,248.458z    "/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-        </div>
+    <a href="contact.html">
+    <div class="hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 mx-64 border-2 hover:border-black transform hover:scale-102 ease-in-out duration-200 items-center py-8 flex flex-row justify-between bg-gray-100">
+        <div class="ml-64 font-garamond text-lg">Meer informatie?</div>
+        <div class="mr-64 font-open text-xs leading-6 w-5/12 ">Wil je graag meer leren over mij, of over een project waar ik aan gewerkt heb? Of, wil je me graag inhuren voor een nieuw project? Voel je vrij om contact met me op te nemen, zodat we elkaar kunnen leren kennen! Klik op de button om naar de contact pagina te gaan.</div>
     </div>
+    </a>
 </div>
+
+<button onclick="topFunction()" id="myBtn" title="Naar boven"><img src="images/icons/ArrowTop.png" class="h-4 mx-1 " alt=""/></button>
 
 <footer class="bg-yellow-800 bg-opacity-50 py-2">
     <div class="mx-12 flex flex-row justify-between items-center ">
@@ -198,5 +225,38 @@
 </footer>
 
 
+<script>
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    
+    var slideIndex = [1,1];
+    var slideId = ["mySlides1", "mySlides2"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+    function showSlides(n, no) {
+      var i;
+      var x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+    }
+    </script>
 </body>
 </html>

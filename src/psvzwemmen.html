@@ -7,7 +7,8 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    
     <style>
       #menu-toggle:checked + #menu {
         display: block;
@@ -129,7 +130,7 @@
 
 <div class="flex flex-col mt-24 ml-48 ">
     <div class="font-open font-light text-sm ">Case Study</div>
-    <div class="mt-2 font-garamond text-2xl font-semibold">PSV Zwemmen applicatie</div>
+    <div class="mt-2 font-open text-2xl font-bold">PSV Zwemmen applicatie</div>
     <div class="mt-2 font-open text-sm font-light">Doelgroeponderzoek, Usability & User Experience Testen, Interface Design</div>
 </div>
 
@@ -160,15 +161,26 @@
     <div class="mt-16 flex flex-row ">
       <div class="ml-48 text-yellow-800 text-opacity-50 font-garamond font-bold text-4xl">Research</div>
       <div class="flex flex-col w-7/12 ml-44 ">
-          <div class="font-open font-bold ">Doelgroeponderzoek</div>
+          <div class="font-open font-bold ">DOELGROEPONDERZOEK</div>
           <div class="font-open font-light leading-8 text-sm">Tijdens dit project is ern onderzoek gedaan gebruik makend van het DOT-framework. Tijdens dit onderzoek is er veel contact gehouden met de stakeholder zodat de nieuwe interface designs voldoen aan alle wensen van de stakeholder. De eerste stap dat hierbij genomen is, is een duidelijk beeld schetsen wie de doelgroep precies is. Hierbij heb ik interviews gehouden met de doelgroep, en heb aan de hand van deze interviews drie customer journeys opgesteld; voor de zwemmer, de coach en de administrator.</div>
-          <div class="flex flex-row">
-            <img src="images/projecten/psvzwemmen/CustomerJourneyZwemmers.png" class="-ml-144 h-64 mr-2"/>
-            <img src="images/projecten/psvzwemmen/CustomerJourneyCoach.png" class="h-64 mr-2 "/>
-            <img src="images/projecten/psvzwemmen/CustomerJourneyAdministrator.png" class="h-64"/>
+          <div class="slideshow-container">
+            <div class="mySlides1">
+              <img src="images/projecten/psvzwemmen/CustomerJourneyZwemmers.png" style="width:100%">
+            </div>
+          
+            <div class="mySlides1">
+              <img src="images/projecten/psvzwemmen/CustomerJourneyCoach.png" style="width:100%">
+            </div>
+          
+            <div class="mySlides1">
+              <img src="images/projecten/psvzwemmen/CustomerJourneyAdministrator.png" style="width:100%">
+            </div>
+          
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
           </div>
 
-          <div class="mt-8 font-open font-bold ">DE UITDAGING</div>
+          <div class="mt-8 font-open font-bold ">BRANDGUIDE</div>
           <div class="font-open font-light leading-8 text-sm">Er bestaat momenteel een app en backend voor (nieuwe) zwemmers om zich in te schrijven voor zwemwedstrijden, training sessies, activiteiten, etc. Echter, moet deze applicatie volledig ge-rebrand worden. Ook moet er getest worden met de doelgroep. Het doel hierbij is om te itereren op de al bestaande applicatie, en de mobile applicatie voor PSV Zwemmen te verbeteren.</div>
 
           <div class="mt-8 font-open font-bold ">DE UITKOMST</div>
@@ -185,6 +197,7 @@
       </div>
   </div>
 </div>
+
 
 
 <button onclick="topFunction()" id="myBtn" title="Naar boven"><img src="images/icons/ArrowTop.png" class="h-4 mx-1 " alt=""/></button>
@@ -215,6 +228,24 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
 }
 </script>
 </body>
